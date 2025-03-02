@@ -6,6 +6,7 @@
     padding: 56px 24px 36px;
     gap: 24px;
     max-width: 1160px;
+    width: 100%;
     align-items: center;
 }
 
@@ -18,6 +19,15 @@
 .banner__text p,
 .banner__text h1 {
     text-align: center;
+}
+
+.banner__text p {
+    line-height: 1.375rem;
+}
+
+.banner__text h1 {
+    font-size: var(--font-size-heading);
+    line-height: 3.125rem;
 }
 
 
@@ -46,6 +56,7 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    font-weight: 700;
 }
 
 .banner__btn_generate {
