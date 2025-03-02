@@ -1,0 +1,26 @@
+.section {
+    justify-content: center;
+    display: flex;
+    gap: 162px;
+    margin: auto;
+    max-width: 954px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .section {
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .section_reversed {
+        flex-direction: column-reverse;
+    }
+}

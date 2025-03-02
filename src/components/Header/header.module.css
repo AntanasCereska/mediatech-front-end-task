@@ -1,0 +1,17 @@
+.header {
+    padding: 20px 150px;
+    background-color: var(--color-black-400);
+    width: 100%;
+}
+
+.nav {
+    margin: auto;
+    display: flex;
+    max-width: var(--max-content-width);
+}
+
+@media (max-width: 1024px) {
+    .nav {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,125 @@
+.banner {
+    background-color: var(--color-black-300);
+    color: var(--color-black-100);
+    display: flex;
+    flex-direction: column;
+    padding: 56px 24px 36px;
+    gap: 24px;
+    max-width: 1160px;
+    align-items: center;
+}
+
+.banner__text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.banner__text p,
+.banner__text h1 {
+    text-align: center;
+}
+
+
+.banner__psw_gen {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    grid-template-areas: 'generated-psw  generate-btn copy-btn';
+    justify-content: space-between;
+    max-width: 696px;
+    width: 100%;
+    align-items: stretch;
+}
+
+.banner__psw_gen div {
+    background-color: var(--color-black-100);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+}
+
+.banner__psw_gen p {
+    color: var(--color-black-400);
+    font-size: var(--font-size-md);
+    line-height: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.banner__btn_generate {
+    width: fit-content;
+    background-color: var(--color-black-100);
+    border: none;
+    padding: 12px 24px 12px;
+    cursor: pointer;
+}
+
+
+.banner__btn_generate:focus-visible,
+.banner__btn_copy:focus-visible {
+    outline: 3px solid var(--color-green-200);
+    outline-offset: -2px;
+}
+
+.banner__btn_copy {
+    position: relative;
+    grid-area: copy-btn;
+    padding: 12px 36px;
+    background-color: var(--color-green-100);
+    line-height: 28px;
+    color: var(--color-black-100);
+    border: none;
+    cursor: pointer;
+}
+
+.banner__btn_copy:hover {
+    background-color: var(--color-green-200);
+}
+
+.banner__btn_copy_tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-black-400);
+    color: var(--color-black-100);
+    padding: 6px 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+    margin-bottom: 6px
+}
+
+.banner__checkboxes {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 26px;
+}
+
+.banner__checkboxes div {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+}
+
+.banner__checkboxes label,
+.banner__checkboxes input {
+    cursor: pointer;
+    height: fit-content;
+}
+
+@media (max-width: 768px) {
+    .banner__psw_gen {
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            'generated-psw  generate-btn'
+            'copy-btn copy-btn'
+        ;
+    }
+
+    .banner__checkboxes {
+        grid-template-columns: repeat(2, auto);
+    }
+}

@@ -1,0 +1,17 @@
+.message {
+    color: var(--color-black-200);
+    font-size: var(--font-size-xs);
+    text-align: center;
+}
+
+.message p,
+.message span {
+    font-size: inherit;
+    font-size: inherit;
+}
+
+.message a {
+    font-weight: bolder;
+    color: inherit;
+    text-decoration: none;
+}
